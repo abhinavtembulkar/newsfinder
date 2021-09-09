@@ -1,0 +1,50 @@
+<!-- Commented code -->
+<!-- Below code use semantic UI for designing the website in place of CSS. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>News App using Python Flask</title>
+</head>
+
+<body>
+    <div class="background" style="background-color:rgba(47, 45, 139, 0.933)">
+    
+        <div  class="ui container">
+        
+            <div class="background" style="background-color:rgba(47, 45, 139, 0.933)">
+        
+                <div ><h1 class="ui center aligned header" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: antiquewhite;">News WebApp</h1><br></div>
+        
+        <div class='field'>
+            {% for news in news_list %}
+            <div class ="ui yellow inverted segment">
+        
+                <p class= "ui big header"><b>{{news.title.text}}</b></p>
+                <span >{{news.description.text}}</span><br><br>
+                <span >Published On : {{news.pubDate.text}}</span><br><br>
+                <a class = "ui green button" href="{{news.link.text}}">Read More.</a>              
+                
+            </div>               
+            {% endfor %}
+        
+         </div></div></div>
+</body>
+
+<br><br>
+
+<center>
+<footer>
+    <style>
+        footer{
+            color: white;
+        }
+    </style>
+
+</footer>
+</center>   
+<br><br>
+
+</html>
