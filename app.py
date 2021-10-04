@@ -17,7 +17,7 @@ def index():
     news_list = soup.find_all('item')
     return render_template('news.html',news_list=news_list)
 
-@app.route('/news')
+@app.route('/data')
 def news():
 	print('data recieved')
 	return "<h2>data recieved</h2>"
